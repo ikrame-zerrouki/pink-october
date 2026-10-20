@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 import {
   ArrowLeft,
   Ribbon,
-  ShieldCheck,
+  ShieldCheck,      // للوقاية
+  CalendarHeart,    // للشهر الوردي
   Stethoscope,
   Sparkles,
   Heart,
@@ -40,26 +41,19 @@ const features = [
     color: "from-teal-500 to-cyan-500",
   },
   {
-    icon: Heart,
-    title: "الوقاية",
-    desc: "عادات يومية تحمي صحتك على المدى الطويل.",
-    href: "/prevention",
-    color: "from-rose-500 to-orange-400",
-  },
-  {
-    icon: Users,
-    title: "قصص الناجيات",
-    desc: "قصص ملهمة من نساء تجاوزن المرض.",
-    href: "/stories",
-    color: "from-amber-500 to-yellow-500",
-  },
-  {
-    icon: Sparkles,
-    title: "اختبار التوعية",
-    desc: "اختبر معلوماتك في 10 أسئلة سريعة.",
-    href: "/quiz",
-    color: "from-indigo-500 to-purple-500",
-  },
+  icon: ShieldCheck,
+  title: "الوقاية",
+  desc: "عادات يومية تحمي صحتك على المدى الطويل.",
+  href: "/prevention",
+  color: "from-emerald-500 to-teal-500",
+},
+{
+  icon: CalendarHeart,
+  title: "الشهر الوردي",
+  desc: "احتفالي بالتوعية — تاريخ، أفكار، وتحديات للمشاركة.",
+  href: "/pink-october",
+  color: "from-pink-500 to-fuchsia-500",
+},
 ];
 
 const stats = [

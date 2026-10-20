@@ -6,14 +6,7 @@ export const metadata: Metadata = {
   description: "مرحبًا بك في مشروعي. اكتشف صفحاتنا التوعوية والمحتوى الهادف.",
 };
 
-async function getCurrentYear() {
-  'use cache';
-  return new Date().getFullYear();
-}
-
-export default async function HomePage() {
-  const year = await getCurrentYear();
-
+export default function HomePage() {
   return (
     <main className="min-h-screen bg-blush text-ink">
       {/* التنقل */}
@@ -151,7 +144,7 @@ export default async function HomePage() {
         <p className="display text-base font-bold text-rose-deep">
           مشروعي | محتوى يهتم بالإنسان
         </p>
-        <p className="mt-2">© {year} جميع الحقوق محفوظة.</p>
+        <p className="mt-2">© {new Date().getFullYear()} جميع الحقوق محفوظة.</p>
       </footer>
     </main>
   );

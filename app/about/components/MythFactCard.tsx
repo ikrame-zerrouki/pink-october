@@ -1,4 +1,4 @@
-import { CheckIcon, XIcon } from "./icons";
+import { ArrowLeftIcon, CheckIcon, XIcon } from "./icons";
 
 export default function MythFactCard({
   myth,
@@ -8,32 +8,60 @@ export default function MythFactCard({
   fact: string;
 }) {
   return (
-    <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
+    <div className="group relative overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
       <div className="grid md:grid-cols-2">
-        {/* Myth */}
-        <div className="p-6 bg-gradient-to-br from-red-50 to-red-100/50">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center flex-shrink-0">
-              <XIcon className="w-4 h-4" />
+        {/* ───── الخرافة ───── */}
+        <div className="relative bg-gradient-to-br from-rose-50 via-red-50 to-orange-50/60 p-7 md:p-8">
+          <div aria-hidden className="absolute inset-0 overflow-hidden">
+            <span className="absolute -right-4 -top-12 select-none font-serif text-[9rem] leading-none text-red-200/50">
+              “
             </span>
-            <span className="text-red-700 font-bold text-sm uppercase tracking-wide">
+            <span className="absolute -bottom-8 -left-8 h-32 w-32 rounded-full bg-red-300/20 blur-2xl" />
+          </div>
+
+          <div className="relative mb-4 flex items-center gap-3">
+            <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-rose-500 to-red-600 text-white shadow-lg shadow-red-500/30 ring-4 ring-red-100">
+              <XIcon className="h-4 w-4" />
+            </span>
+            <span className="rounded-full bg-red-100 px-3 py-1 text-xs font-bold tracking-wide text-red-700">
               خرافة
             </span>
           </div>
-          <p className="text-gray-800 leading-relaxed">{myth}</p>
+
+          <p className="relative text-lg leading-loose text-gray-500 line-through decoration-red-300/70 decoration-[1.5px]">
+            {myth}
+          </p>
         </div>
 
-        {/* Fact */}
-        <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-100/50 border-t md:border-t-0 md:border-r border-gray-100">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0">
-              <CheckIcon className="w-4 h-4" />
+        {/* ───── الحقيقة ───── */}
+        <div className="relative border-t border-gray-100 bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50/60 p-7 md:border-r md:border-t-0 md:p-8">
+          <div aria-hidden className="absolute inset-0 overflow-hidden">
+            <span className="absolute -left-4 -top-12 select-none font-serif text-[9rem] leading-none text-emerald-200/50">
+              ”
             </span>
-            <span className="text-green-700 font-bold text-sm uppercase tracking-wide">
+            <span className="absolute -bottom-8 -right-8 h-32 w-32 rounded-full bg-emerald-300/25 blur-2xl" />
+          </div>
+
+          {/* شارة الانتقال من الخرافة إلى الحقيقة */}
+          <div
+            aria-hidden
+            className="absolute left-1/2 top-0 z-20 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-4 border-white bg-gradient-to-br from-amber-300 to-orange-400 text-white shadow-lg transition-transform duration-500 group-hover:scale-110 md:left-auto md:right-0 md:top-1/2 md:translate-x-1/2"
+          >
+            <ArrowLeftIcon className="h-5 w-5 -rotate-90 md:rotate-0" />
+          </div>
+
+          <div className="relative mb-4 flex items-center gap-3">
+            <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 text-white shadow-lg shadow-emerald-500/30 ring-4 ring-emerald-100">
+              <CheckIcon className="h-4 w-4" />
+            </span>
+            <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold tracking-wide text-emerald-700">
               حقيقة
             </span>
           </div>
-          <p className="text-gray-800 leading-relaxed">{fact}</p>
+
+          <p className="relative text-lg font-medium leading-loose text-gray-900">
+            {fact}
+          </p>
         </div>
       </div>
     </div>

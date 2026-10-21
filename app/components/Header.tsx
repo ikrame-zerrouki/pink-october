@@ -34,7 +34,7 @@ const FOCUS =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 focus-visible:ring-offset-2";
 
 const navLinks = [
-  { href: "/", label: "الرئيسية" },
+  { href: "/", label: "اسية" },
   { href: "/about", label: "عن المرض" },
   { href: "/self-exam", label: "الفحص الذاتي" },
   { href: "/medical-checkups", label: "الفحوصات الطبية" },

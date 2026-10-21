@@ -144,7 +144,7 @@ export default function HomePage() {
         <p className="display text-base font-bold text-rose-deep">
           مشروعي | محتوى يهتم بالإنسان
         </p>
-        <p className="mt-2">© {new Date().getFullYear()} جميع الحقوق محفوظة.</p>
+       <p className="mt-2">© 2026  جميع الحقوق محفوظة.</p>
       </footer>
     </main>
   );

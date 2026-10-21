@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useRef } from "react";
@@ -17,14 +18,16 @@ import {
   Calendar,
   Heart,
 } from "lucide-react";
-import Reveal from "../about/components/Reveal";
-import FloatingRibbon from "../about/components/FloatingRibbon";
-import SectionHeading from "../about/components/SectionHeading";
-import { RibbonIcon } from "../about/components/icons";
-import StepCarousel from "./components/StepCarousel";
-import TimingCards from "./components/TimingCards";
-import ChecklistCard from "./components/ChecklistCard";
-import ReminderForm from "./components/ReminderForm";
+
+import Reveal from "../../about/components/Reveal";
+import FloatingRibbon from "../../about/components/FloatingRibbon";
+import SectionHeading from "../../about/components/SectionHeading";
+import { RibbonIcon } from "../../about/components/icons";
+
+import StepCarousel from "./StepCarousel";
+import TimingCards from "./TimingCards";
+import ChecklistCard from "./ChecklistCard";
+import ReminderForm from "./ReminderForm";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
